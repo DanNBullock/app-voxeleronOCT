@@ -1,0 +1,10 @@
+{
+    "inputDir" : "/N/u/dnbulloc/Carbonate/OCT_Data/PrimaryData/001",
+    "layerIndexSequences": "1:7,1:4,5,6",
+    "analysesNames": "TT, NL, ONL, PROS",
+    "visFieldDiam" : 20,
+    "theshFloor" : 20,
+    "gaussKernel" : 3,
+    "meanShape" : "rings"
+
+}

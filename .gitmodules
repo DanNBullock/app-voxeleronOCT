@@ -1,0 +1,6 @@
+[submodule "OCT_scripts"]
+	path = OCT_scripts
+	url = https://github.com/DanNBullock/OCT_scripts
+[submodule "jsonlab"]
+	path = jsonlab
+	url = git@github.com:fangq/jsonlab.git
