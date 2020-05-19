@@ -34,7 +34,11 @@ end
 
 %input data directory for current subject
 %example input data dir
-inputDataDir=config.inputDir;
+
+osRaw=config.os_raw;
+osCentroid=config.os_centroid;
+odRaw=config.od_raw;
+odCentroid=config.od_centroid;
 
 %temporary path for storage for secondary data product
 secondaryOutputDir=fullfile(pwd,'secondaryData');
@@ -42,15 +46,10 @@ if ~isfolder(secondaryOutputDir)
     mkdir(secondaryOutputDir)
 end
 
-%parse the input data directory and content
-inputDataDirContent=dir(inputDataDir);
-inputFileNames={inputDataDirContent(~[inputDataDirContent.isdir]).name};
-rawFiles=inputFileNames(contains(inputFileNames,'Raw'));
-
 %run it twice, no need to make a loop
 %this will cause a problem if there aren't two eyes worth of data
-createLayerAmalgumOutputs(fullfile(inputDataDir,rawFiles{1}),secondaryOutputDir, layerIndexSequences,analysesNames)
-createLayerAmalgumOutputs(fullfile(inputDataDir,rawFiles{2}),secondaryOutputDir, layerIndexSequences,analysesNames)
+createLayerAmalgumOutputs(osRaw,secondaryOutputDir, layerIndexSequences,analysesNames)
+createLayerAmalgumOutputs(odRaw,secondaryOutputDir, layerIndexSequences,analysesNames)
 
 %% do layer based analysis
 %visual field width in degrees, i.e. diameter of visual field measured
@@ -84,7 +83,7 @@ if ~isfolder(finalOutputDir)
 end
 
 %run the analysis
-analyzeSubjectOCTDataWrapper(secondaryOutputDir,finalOutputDir, inputDataDir,visFieldDiam, meanShape,gaussKernel,theshFloor)
+analyzeSubjectOCTDataWrapper(secondaryOutputDir,finalOutputDir, {osCentroid, odCentroid },visFieldDiam, meanShape,gaussKernel,theshFloor)
 
 %end of wrapper
 

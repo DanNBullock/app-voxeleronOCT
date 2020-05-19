@@ -1,5 +1,9 @@
 {
-    "inputDir" : "/N/u/dnbulloc/Carbonate/OCT_Data/PrimaryData/001",
+    
+    "os_raw" : "/N/u/dnbulloc/Carbonate/OCT_Data/PrimaryData/001/OS_Raw.csv",
+    "od_raw" : "/N/u/dnbulloc/Carbonate/OCT_Data/PrimaryData/001/OD_Raw.csv",
+    "os_centroid" : "/N/u/dnbulloc/Carbonate/OCT_Data/PrimaryData/001/OScentroid.csv",
+    "od_centroid" : "/N/u/dnbulloc/Carbonate/OCT_Data/PrimaryData/001/ODcentroid.csv",
     "layerIndexSequences": "1:7,1:4,5,6",
     "analysesNames": "TT, NL, ONL, PROS",
     "visFieldDiam" : 20,
