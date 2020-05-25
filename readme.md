@@ -117,31 +117,3 @@ The rest of the variables are parameters which the user may modify in order to i
 | theshFloor | Specifies the desired threshold to be applied to input data obtained from createCSVsumOutputFiles.   Applied across subjects (prior to computation of means).  Values below this are set to NaN and are not featured in computation of mean.  If no threshold is desired, enter a value of []. | Numerical value |
 | gaussKernel | Specifies the desired smoothing kernel to be applied to input data obtained from createCSVsumOutputFiles.   Applied across subjects (prior to computation of means).  Pixel values are thus the result of a gaussian smoothing process.  If no threshold is desired, enter a value of [] or 1. | Odd integer value |
 | meanShape | Specifies the desired method for computing the mean.  &quot;rings&quot; will generate averages for concentric, degree-specific rings (like a bullseye), while &quot;full&quot; will compute the mean for the entire visual field (to the specified current, iterated degree). | Either &quot;rings&quot; or &quot;full&quot; |
-
-## MAIA
-
-**Before running this code (MAIA)**
-
-### text here?
-
-**Running this code (MAIA)**
-
-This code is written in Matlab.  It makes use of no specialized matlab toolkits
-
-The primary wrapper function is _MAIAwrapper __.m_ which goes from individual raw data all the way to subject-level analysis.   Thus, once the local github repository has been added to Matlab&#39;s path, running the contents of _MAIAwrapper__.m_ (after setting paths appropriately) should be sufficient to perform the full analysis.
-
-Ensure the correct pathways are set for (see below for further details):
-
-subjectDir (input txt files)
-
-keyFile (folder that specifies groups)
-
-outputDir (final output directory)
-
-In addition, use the meanMethod variable to set whether you would like the iterative means computed as full shapes or as rings.
-
-
-
-**Code details (MAIA)**
-
-The wrapper, _MAIAwrapper__.m_ , only calls a single function , _computeGroupMAIAmeans.m_, which creates output tables for both the index-based means, and the iterative, degree-based means.
