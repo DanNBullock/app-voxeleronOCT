@@ -31,13 +31,11 @@ Parameter inputs are as follows:
 
 The output is as follows:
 
-Two tables, meanTable.csv and stdTable.csv.  In both tables, each row (aside from the header row) corresponds to each combination of eye and layer amalgum analysis (i.e. layer sequence input in layerIndexSequences) that was performed.  Each column (other than the LayerNames column, which lists the combination of eye and layer amalgum analysis) corresponds to the measurement for one degree of visual angle, up to the maximum specified by the visFieldDiam variable.  The mean and standrard deviations for each of these degrees of visual angle are computed in accordance with the meanShape input variable.
+Two tables, meanTable.csv and stdTable.csv.
+In both tables, each row (aside from the header row) corresponds to each combination of eye and layer amalgum analysis (i.e. layer sequence input in layerIndexSequences) that was performed.  Each column (other than the LayerNames column, which lists the combination of eye and layer amalgum analysis) corresponds to the measurement for one degree of visual angle, up to the maximum specified by the visFieldDiam variable.  The mean and standrard deviations for each of these degrees of visual angle are computed in accordance with the meanShape input variable.
 
 **Code details (OCT)**
+
 Source repo can be found here: https://github.com/DanNBullock/OCT_scripts/
 
 The main.m function is the primary function for this app, and calls the relevant subfunctions of the OCT_scripts respository.  Please see the main.m of this repo for those top level functions and their usage, and see OCT_scripts for those functions's documentation and subfucntions.
-
-
-
-
