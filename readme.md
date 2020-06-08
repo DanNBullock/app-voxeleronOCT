@@ -1,10 +1,10 @@
 ##
-## app-voxelronOCT
+## app-voxeleronOCT
 
 **Authors**
 
 - Daniel Bullock ([dnbulloc@iu.edu](mailto:dnbulloc@iu.edu))
-- Jasleen Jolly ([jolly@eye.ox.ac.uk](mailto:jasleen.jolly@eye.ox.ac.uk))
+- Jasleen Jolly ([jasleen.jolly@eye.ox.ac.uk](mailto:jasleen.jolly@eye.ox.ac.uk))
 
 **Lab Directors**
 
