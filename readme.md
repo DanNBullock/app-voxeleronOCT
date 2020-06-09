@@ -8,7 +8,7 @@
 
 **Lab Directors**
 
-- Franco Pestilli ([frakkopesto@gmail.com](mailto:frakkopesto@gmail.com)) - Universitynof Texas at Austin / Indiana University
+- Franco Pestilli ([frakkopesto@gmail.com](mailto:frakkopesto@gmail.com)) - University of Texas at Austin / Indiana University
 - Holly Bridge [holly.bridge@ndcn.ox.ac.uk](holly.bridge@ndcn.ox.ac.uk)  -  University of Oxford
 
 **App Purpose**
