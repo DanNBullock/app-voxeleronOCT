@@ -4,12 +4,12 @@
 **Authors**
 
 - Daniel Bullock ([dnbulloc@iu.edu](mailto:dnbulloc@iu.edu))
-- Jasleen Jolly [jasleen.jolly@eye.ox.ac.uk](mailto:jasleen.jolly@eye.ox.ac.uk))
+- Jasleen Jolly ([jasleen.jolly@eye.ox.ac.uk](mailto:jasleen.jolly@eye.ox.ac.uk))
 
 **Lab Directors**
 
 - Franco Pestilli ([frakkopesto@gmail.com](mailto:frakkopesto@gmail.com)) - University of Texas at Austin / Indiana University
-- Holly Bridge [holly.bridge@ndcn.ox.ac.uk](holly.bridge@ndcn.ox.ac.uk)  -  University of Oxford
+- Holly Bridge ([holly.bridge@ndcn.ox.ac.uk](mailto:holly.bridge@ndcn.ox.ac.uk))  -  University of Oxford
 
 **App Purpose**
 
