@@ -13,7 +13,7 @@
 
 **App Purpose**
 
-This app computes the mean and standard deviation of Voxeleron OTC data for each degree of visual angle.  This can be computed within a single layer, or across layers.  The output of this app is a table for both mean and standard deviation, and the output data (visual angle OCT data) for each combination of eye and layer combination.
+This App uses Voxeleron OTC data from the MAIA system and computes the mean and standard deviation for each degree of visual angle. Mean and STD can be computed within a single layer, or across layers of the OCT data.  The output of this app is a table for both mean and standard deviation, and the output data (visual angle OCT data) for each combination of eye and layer combination.
 
 **Running this app**
 
