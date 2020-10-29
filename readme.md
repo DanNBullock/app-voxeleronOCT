@@ -1,3 +1,6 @@
+[![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
+[![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.346-blue.svg)](https://doi.org/10.25663/brainlife.app.346)
+
 ##
 ## app-voxeleronOCT
 
@@ -11,6 +14,17 @@
 - Franco Pestilli ([frakkopesto@gmail.com](mailto:frakkopesto@gmail.com)) - University of Texas at Austin / Indiana University
 - Holly Bridge ([holly.bridge@ndcn.ox.ac.uk](mailto:holly.bridge@ndcn.ox.ac.uk))  -  University of Oxford
 
+### Funding
+[![NSF-BCS-1734853](https://img.shields.io/badge/NSF_BCS-1734853-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1734853)
+[![NSF-BCS-1636893](https://img.shields.io/badge/NSF_BCS-1636893-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1636893)
+[![NSF-ACI-1916518](https://img.shields.io/badge/NSF_ACI-1916518-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1916518)
+[![NSF-IIS-1912270](https://img.shields.io/badge/NSF_IIS-1912270-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1912270)
+[![NIH-NIBIB-R01EB029272](https://img.shields.io/badge/NIH_NIBIB-R01EB029272-green.svg)](https://grantome.com/grant/NIH/R01-EB029272-01)
+[![NIMH-T32-5T32MH103213-05](https://img.shields.io/badge/NIMH_T32-5T32MH103213--05-blue.svg)](https://projectreporter.nih.gov/project_info_description.cfm?aid=9725739)
+
+### References 
+[Avesani, P., McPherson, B., Hayashi, S. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019).](https://doi.org/10.1038/s41597-019-0073-y)
+
 **App Purpose**
 
 This App uses Voxeleron OTC data from the MAIA system and computes the mean and standard deviation for each degree of visual angle. Mean and STD can be computed within a single layer, or across layers of the OCT data.  The output of this app is a table for both mean and standard deviation, and the output data (visual angle OCT data) for each combination of eye and layer combination.
@@ -18,6 +32,8 @@ This App uses Voxeleron OTC data from the MAIA system and computes the mean and 
 **Running this app**
 
 This code is written in Matlab and subsequently compiled.  It makes use of the _imresize_ function and thus requires Matlab&#39;s image processing toolkit as well the source repository for this codebase (https://github.com/DanNBullock/OCT_scripts/).
+
+## Input
 
 The *only* input for this application is an [appropriately structured OCT data object](https://brainlife.io/datatype/5ebe0bbbb969982124072325) for a given subject.  
 
@@ -35,10 +51,15 @@ Parameter inputs are as follows:
 | gaussKernel | Specifies the desired smoothing kernel to be applied to input data obtained from createCSVsumOutputFiles.   Applied across subjects (prior to computation of means).  Pixel values are thus the result of a gaussian smoothing process.  If no threshold is desired, enter a value of [] or 1. | Odd integer value |
 | meanShape | Specifies the desired method for computing the mean.  &quot;rings&quot; will generate averages for concentric, degree-specific rings (like a bullseye), while &quot;full&quot; will compute the mean for the entire visual field (to the specified current, iterated degree). | Either &quot;rings&quot; or &quot;full&quot; |
 
+## Output
+
 The output is as follows:
 
 Two tables, meanTable.csv and stdTable.csv.
 In both tables, each row (aside from the header row) corresponds to each combination of eye and layer amalgum analysis (i.e. layer sequence input in layerIndexSequences) that was performed.  Each column (other than the LayerNames column, which lists the combination of eye and layer amalgum analysis) corresponds to the measurement for one degree of visual angle, up to the maximum specified by the visFieldDiam variable.  The mean and standrard deviations for each of these degrees of visual angle are computed in accordance with the meanShape input variable.
+
+
+## Code details
 
 **Code details (OCT)**
 
