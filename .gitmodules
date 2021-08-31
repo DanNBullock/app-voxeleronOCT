@@ -3,4 +3,4 @@
 	url = https://github.com/DanNBullock/OCT_scripts
 [submodule "jsonlab"]
 	path = jsonlab
-	url = git@github.com:fangq/jsonlab.git
+	url = https://github.com/fangq/jsonlab.git
