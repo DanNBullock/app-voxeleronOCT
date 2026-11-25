@@ -1,3 +1,48 @@
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+> **Computes the mean and standard deviation of Voxeleron retinal OCT layer thickness data per degree of visual angle (rings or other shapes), within or across layers, and outputs CSV tables.**
+
+A compiled MATLAB App (OCT_scripts) that reads the left and right eye raw OCT data and centroids, sums the layers listed in layerIndexSequences into named layer amalgams, optionally thresholds and Gaussian-smooths the maps, and averages them per degree of visual angle out to visFieldDiam. Use it to summarise Voxeleron/MAIA OCT data by eccentricity. layerIndexSequences and analysesNames must have the same number of entries.
+
+| | |
+|---|---|
+| 📥 **Inputs** | `optometry/oct` |
+| 📤 **Outputs** | `raw` |
+| 🐳 **Container** | `brainlife/mcr:r2019a` |
+| ⚙️ **Resources** | 4 CPUs · 28 GB memory · 0.33 h walltime |
+| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.346](https://doi.org/10.25663/brainlife.app.346) |
+
+#### 📥 Inputs
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `input OCT` | `optometry/oct` | yes | Voxeleron OCT data object for one subject: raw data and centroid files for the left (os) and right (od) eye. |
+
+#### 📤 Outputs
+
+| Output | Datatype | Description |
+|---|---|---|
+| `finalOutput` | `raw` | Two CSV files showing the mean and standard deviation for each degree of the visual field, across the analyses requested. |
+
+<details>
+<summary><b>⚙️ Parameters</b> (6)</summary>
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| `layerIndexSequences` | string | `1:7,1:4,5,6` | Indicates which layers are to be summed in order to generate the layer amalgams that will be processed later. |
+| `analysesNames` | string | `TT, NL, ONL, PROS` | Indicates the abbreviation for the layer amalgam, will label the output analyses. Must be of equal length as the layerIndexSequences input. |
+| `visFieldDiam` | number | `20` | Indicates the total *diameter* of the visual field measured by the experimenter. Assumed to be consistent across subjects. The user/experimenter should know this about their data. |
+| `theshFloor` | number | `0` | Specifies the desired threshold to be applied. Applied prior to computation of means. Values below this are set to NaN and are not featured in computation of mean. If no threshold is desired, enter a value of 0. |
+| `gaussKernel` | number | `1` | Specifies the desired smoothing kernel to be applied. Applied prior to computation of means). Pixel values are thus the result of a gaussian smoothing process. If no threshold is desired, enter a value of 1. MUST BE AN ODD NUMBER |
+| `meanShape` | enum | `rings` | Specifies the desired method for computing the mean. "rings" will generate averages for concentric, degree-specific rings (like a bullseye), while "full" will compute the mean for the entire visual field (to the specified current, iterated degree). Options: `rings`, `full`. |
+
+</details>
+
+📚 **References used by this App:**
+- Avesani P et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6:69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
+<!-- brainlife-app:end -->
+
 [![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.346-blue.svg)](https://doi.org/10.25663/brainlife.app.346)
 
